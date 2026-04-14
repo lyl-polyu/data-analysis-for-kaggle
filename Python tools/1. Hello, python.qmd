@@ -1,0 +1,42 @@
+---
+title: "Hello, Python"
+date: "2026-04-12"
+format: 
+  html:
+    code-fold: true
+    code-summary: "click here to see Python code"
+execute:
+  echo: true
+---
+
+## 
+
+In Python, we do not need to declare the data type before we assign value
+to a variable. And we can even change tha data type by reassign value to the variable, like a string ot a boolean.
+
+Comments in Python begins with #.
+
+```{python}
+spam_amount = 0 
+# Here we create a var called spam_amout 
+# And assign it the value of 0 using =
+# = is called an assignment operator
+
+print(spam_amount)
+# print() is a python function that we can display the value of a variable
+
+spam_amount = spam_amount + 4
+# Here we reassign the value to spam_account, where new_value = old_value + 4(0+4=4)
+
+if spam_amount > 0:
+    # the colon(:) indicates that there is a new code block is starting
+    # this means that:
+    # if the condition behind if is true,
+    # then run the new code block
+    print("But I don't want ANY spam!")
+    # Here 4>0 is true, then we run the new code block
+
+viking_song = "Spam " * spam_amount
+
+print(viking_song)
+
