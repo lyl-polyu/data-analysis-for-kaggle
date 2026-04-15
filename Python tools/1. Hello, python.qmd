@@ -1,10 +1,11 @@
 ---
 title: "Hello, Python"
 date: "2026-04-15"
-format: 
+format:
+  gfm: default
   html:
     code-fold: true
-    code-summary: "click here to see Python code"
+    code-summary: "Click here to see Python code"
 execute:
   echo: true
 ---
