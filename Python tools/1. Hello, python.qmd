@@ -1,6 +1,6 @@
 ---
 title: "Hello, Python"
-date: "2026-04-12"
+date: "2026-04-15"
 format: 
   html:
     code-fold: true
@@ -9,7 +9,7 @@ execute:
   echo: true
 ---
 
-## 
+## A Basic Python Program
 
 In Python, we do not need to declare the data type before we assign value
 to a variable. And we can even change tha data type by reassign value to the variable, like a string ot a boolean.
@@ -31,12 +31,52 @@ spam_amount = spam_amount + 4
 if spam_amount > 0:
     # the colon(:) indicates that there is a new code block is starting
     # this means that:
-    # if the condition behind if is true,
+    # if the condition is true,
     # then run the new code block
     print("But I don't want ANY spam!")
     # Here 4>0 is true, then we run the new code block
+    # This is a String, which can be marked by "" or  ''
 
 viking_song = "Spam " * spam_amount
-
+# * operator can be used to multiply 2 numbers
+# We can also use * to multiply a string by a number to repeat it many times, same as + operator.
 print(viking_song)
+```
 
+# Numbers and arithmetic in Python
+
+When we meet a var in Python, we can ask Python the data type by using type() function.
+
+In Python, we have lots of data types.
+
+1. int : integer
+```{python}
+var = 0
+type(var) # Here the output is int.
+```
+
+2. float : floating point number
+```{python}
+var = 0.0
+type(var) # Here the output is float.
+```
+
+3. bool : boolean(True/False)
+```{python}
+var = True
+type(var) # Here the output is bool.  
+```
+
+A natural thing we want to do with numbers is arithmetic.
+In Python, we have lots of operators for arithmetic.
+
+| Operator | Name | Description |
+| :--- | :--- | :--- |
+| `a + b` | Addition | Sum of a and b |
+| `a - b` | Subtraction | Difference of a and b |
+| `a * b` | Multiplication | Product of a and b |
+| `a / b` | True division | Quotient of a and b |
+| `a // b` | Floor division | Quotient of a and b, removing fractional parts |
+| `a % b` | Modulus | Integer remainder after division of a by b |
+| `a ** b` | Exponentiation | a raised to the power of b |
+| `-a` | Negation | The negative of a |
