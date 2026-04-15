@@ -71,13 +71,60 @@ type(var) # Here the output is bool.
 A natural thing we want to do with numbers is arithmetic.
 In Python, we have lots of operators for arithmetic.
 
-| Operator | Name | Description |
-| :--- | :--- | :--- |
-| `a + b` | Addition | Sum of a and b |
-| `a - b` | Subtraction | Difference of a and b |
-| `a * b` | Multiplication | Product of a and b |
-| `a / b` | True division | Quotient of a and b |
-| `a // b` | Floor division | Quotient of a and b, removing fractional parts |
-| `a % b` | Modulus | Integer remainder after division of a by b |
-| `a ** b` | Exponentiation | a raised to the power of b |
-| `-a` | Negation | The negative of a |
+a+b addition
+a-b subtraction
+a*b multiplication
+a/b division
+a//b floor division
+a%b modulus
+a**b exponentiation
+-a negation
+
+An intersting observation is that Python gives us 2 types of division.
+```{python}
+print(5 / 2) # 2.5
+print(6 / 2) # 3.0
+# The interesting thing is that the data type is float.
+
+print(5 // 2) # 2
+print(6 // 2) # 3
+# // operator give us the int type
+```
+
+## Order of operations
+
+括号 (Parentheses)、指数 (Exponents)、乘法/除法 (Multiplication/Division)、加法/减法 (Addition/Subtraction)。
+
+```{python}
+print(8 / 2 - 3 + 2) 
+# The result is 3.0 (float) not 3 (int).
+print(- 3 + 4 * 2)
+
+hat_height_cm = 25
+my_height_cm = 190
+# How tall am I, in meters, when wearing my hat?    
+total_hat_meters = (hat_height_cm + my_height_cm) / 100
+print("Height in meters =", total_hat_meters)
+```
+
+## Builtin functions for working with numbers
+
+min and max function reture the minimum and maximum of their arguments.
+
+```{python}
+print(min(1, 2, 3)) #1
+print(max(1, 2, 3)) #3
+```
+
+abs function returns the absolute value of it argument.
+
+```{python}
+print(abs(32)) #32
+print(abs(-32)) #32
+```
+
+int() and float() and convert numbers into corresponding tyoe.
+```{python}
+print(float(10)) #10.0
+print(int(3.33)) #3
+```
