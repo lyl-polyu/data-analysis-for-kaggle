@@ -1,0 +1,69 @@
+---
+title: "Hello, Python"
+date: "2026-04-17"
+format:
+  gfm: default
+  html:
+    code-fold: true
+    code-summary: "Click here to see Python code"
+execute:
+  echo: true
+---
+
+## Getting Help
+```{python}
+help(round) 
+```
+
+help() displays 2 things:
+1. the header of the function name (here: round(number[, ndigits])), this means that we need to provide a number to round, and optionally give a seperate argument which could be described as ndigits.
+2. a brief English description of what the function does.
+
+# Defining functions and Docstrings
+
+```{python}
+def least_difference(a,b,c):
+    """
+    This part is Docstrings, which is used to help the programmer to under stand the function and give an example.
+
+    Return the smallest difference between any two numbers among a, b and c.
+
+    >>> least_difference(1, 5, -5)
+    4
+    """
+    diff1 = abs(a-b)
+    diff2 = abs(b-c)
+    diff3 = abs(a-c)
+    return min(diff1, diff2, diff3)
+    # return is necessary, this means what the function will give back to you when you call this function
+
+print(least_difference(1, 10, 100))
+help(least_difference)
+# Here help() will return the Docstrings
+```
+
+# Default Arguments
+
+```{python}
+print(1, 2, 3, sep=' < ')
+# Here if we do not give the value'<', the default value will be used.
+# And the default value is " "(a single space)
+print(1, 2, 3)
+
+def greet(who="Colin"):
+    print("Hello,", who)
+greet()
+greet(who="Kaggle")
+# (In this case, we don't need to specify the name of the argument, because it's unambiguous.) 写出参数名字是显示，隐式会根据顺序自动匹配
+greet("world")          
+```
+
+# Functions Applied to Functions
+
+```{python}
+def mult_by_five(x):
+    return 5 * x
+def squared_call(fn, arg):
+    return fn(fn(arg))
+print(squared_call(mult_by_five, 2))
+```
